@@ -1,0 +1,38 @@
+
+##公共配置
+
+spring:
+  application:
+    name: user-center
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: #填写自己的邮箱地址，用于发邮箱
+    password: #填写邮箱的授权码
+    default-encoding: utf-8
+    properties:
+      "[mail.smtp.auth]": true
+      "[mail.smtp.ssl.enable]": true  #  465端口必须加这一行
+
+  #redis配置
+  # DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user-center #默认本地3306端口，用user-center这个数据库
+    username: root
+    password: ##填写自己的密码
+  data:
+    redis:
+      host: 127.0.0.1 #redis服务器的地址，默认本地，可按需更改
+      port: 6379  #默认端口
+      password: #填自己设置的密码
+      # 加上超时配置，不要无限阻塞
+      timeout: 3000
+
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 30m
+
+
