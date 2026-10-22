@@ -14,14 +14,15 @@
             <result property="phone" column="phone" />
             <result property="email" column="email" />
             <result property="status" column="status" />
+            <result property="identity" column="identity" />
             <result property="createTime" column="create_time" />
             <result property="updateTime" column="update_time" />
-            <result property="deleted" column="is_delete" />
+            <result property="deleted" column="deleted" />
     </resultMap>
 
     <sql id="Base_Column_List">
         id,user_name,user_account,user_password,avatar_url,gender,
         phone,email,status,create_time,update_time,
-        is_delete
+        identity,deleted
     </sql>
 </mapper>

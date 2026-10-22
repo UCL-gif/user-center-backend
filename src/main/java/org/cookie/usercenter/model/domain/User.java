@@ -41,6 +41,7 @@ public class User {
     /**
      * 用户性别
      */
+    @TableField(updateStrategy = FieldStrategy.ALWAYS)
     private Integer gender;
 
     /**
@@ -75,5 +76,5 @@ public class User {
      * 是否为删除状态
      */
     @TableLogic
-    private Integer Deleted;
+    private Integer deleted;
 }

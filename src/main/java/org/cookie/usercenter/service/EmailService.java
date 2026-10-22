@@ -8,7 +8,7 @@ public interface EmailService {
     
     boolean sendEmailCode(String targetEmail) throws MessagingException;
     
-    boolean SuccessCheckEmailCode(String targetEmail,String inputCode);
-    
-    String generateCode(int length);
+    boolean sendCode(String email, CodePurpose purpose, boolean deliver) throws MessagingException;
+
+    void verifyCode(String email, String code, CodePurpose purpose);
 }

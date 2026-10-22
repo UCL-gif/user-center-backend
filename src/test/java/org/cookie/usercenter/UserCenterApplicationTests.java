@@ -2,6 +2,7 @@ package org.cookie.usercenter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.util.DigestUtils;
 
 
@@ -9,6 +10,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 @SpringBootTest
+@ActiveProfiles("test")
 class UserCenterApplicationTests {
     
     @Test
